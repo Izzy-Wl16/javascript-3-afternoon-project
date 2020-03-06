@@ -15,13 +15,12 @@ var carDetails = {
   model: 'tacoma',
   year: 1994
 }
-// Do not edit the code above.
-
+// Do not edit the code above
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 
 
@@ -34,7 +33,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+  const { firstName, lastName, title} = obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,7 +52,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  const { utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona;
+}
 
 
 
@@ -67,8 +69,11 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
-
+function ingredients(obj){
+const{carb, fat, protein} = obj
+const newIngredients = [carb, fat, protein] 
+return newIngredients
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -80,13 +85,20 @@ function greeting( obj ) {
       return one + two + three
     }
 
-  Write a function called largeNumbers that will take a destructured object as it's parameter.
+  Write a function called largeNumbers that will take a  as it's parameter.
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-
+function largeNumbers({first, second, third}){
+  if(first < second && first < third){
+  return first
+} else if(second < first && second < third){
+  return second
+}else{
+  return third
+}
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -97,6 +109,12 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
-
+function numberGroups({a, b, c}){
+  if(a > b && a > c){
+    return a
+  } else if(b > a && b > c){
+    return b
+  }else{
+    
+  }return c
+  }
