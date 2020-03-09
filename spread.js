@@ -2,7 +2,6 @@
   Once you complete a problem, refresh ./spread.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
-
   You can refresh the page at any time to re-run all the tests.
 */
 
@@ -17,7 +16,7 @@ let product = {
   imageUrl: 'https://i.ebayimg.com/images/g/9T4AAOSwbmdZf2jN/s-l640.jpg'
 }
 
-// code here
+let productCopy = {...product}
 
 
 
@@ -28,7 +27,7 @@ let product = {
 
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-// code here
+let colorsCopy = {...colors}
 
 
 
@@ -43,7 +42,7 @@ function addNums(num1, num2, num3) {
   return num1 + num2 + num3;
 }
 
-// code here
+let result = addNums(...numbers)
 
 
 ////////// PROBLEM 4 //////////
@@ -53,4 +52,5 @@ function addNums(num1, num2, num3) {
 let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
-// code here
+let combinedArrays = [...arr1, ...arr2]
+console.log('combinedArrays: ', combinedArrays);
